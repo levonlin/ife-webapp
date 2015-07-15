@@ -1,0 +1,25 @@
+body {
+	font-size: 16px;
+}
+.project-name {
+	font-family: "Microsoft Yahei";
+}
+.member-list{
+	border-bottom: 1px solid #F4F4F4;
+  	padding: 10px 0px 10px 0px;
+}
+.member-list.last-member{
+	border-bottom: 0px;
+}
+.member-name-link{
+	text-decoration: none;
+	color: #159957;
+}
+.member-desc{
+	font-size: 1rem;
+}
+.site-footer p {
+	text-align: center;
+	font-size: 0.5rem;
+	padding-bottom: 3rem;
+}
