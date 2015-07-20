@@ -1,0 +1,7 @@
+# play framework
+tmp/
+# eclipse
+.eclipse
+.settings
+# mac os
+.DS_STORE
