@@ -9,15 +9,22 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * Created by Administrator on 2015/7/19.
+ *
+ *标签表
+ *
+ * Created by G-bgyl on 2015/7/19.
  */
 
 @Entity
 @Table(name="Tag")
 public class Tag extends Model {
 
+	/**
+	 *标签名
+	 */
+	@column(name = "tagName")
     @Required
-    public String tagName;//标签名
+    public String tagName;
 
     public Tag(){}
     public Tag(String tagName){

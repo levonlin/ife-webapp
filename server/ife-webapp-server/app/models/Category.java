@@ -8,15 +8,23 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * Created by Administrator on 2015/7/19.
+ *
+ * 笔记分类表
+ *
+ * Created by G-bgyl on 2015/7/19.
  */
 
 
 @Entity
 @Table(name="Category")
 public class Category extends Model {
+	
+	/**
+	 * 笔记类型
+	*/
+	@column(name = "noteCategoryName")
     @Required
-    public String noteCategoryName;//笔记类型
+    public String noteCategoryName;
 
     public Category(){
 
