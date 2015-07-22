@@ -5,3 +5,6 @@ tmp/
 .settings
 # mac os
 .DS_STORE
+#idea
+*.ipr
+*.iml
