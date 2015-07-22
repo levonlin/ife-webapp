@@ -17,7 +17,7 @@
 
 /** 整体样式 **/
 html,body{
-	font-family: Microsoft Yahei;
+	font-family: Helvetica,Arial,sans-serif，Microsoft Yahei;
 	background: #EEEEEE;
 }
 /** 笔记目录 **/
@@ -46,6 +46,7 @@ html,body{
 	color: #A1A1A1;
 	padding: 10px 0px 10px 35px;
 	text-decoration: none;
+	font-size: 0.875rem;
 }
 .note-cat-list ul li a.active,.note-cat-list ul li a:hover{
 	color: #FFF;
@@ -100,7 +101,6 @@ html,body{
 }
 .note-content-addBtn{
 	padding-top: 30px;
-	padding-right: 30px;
 	float: right;
 }
 .note-content-addBtn a{
@@ -130,10 +130,11 @@ html,body{
 .note-content-list-item-title{
 	font-weight: bold;
 	padding-bottom: 10px;
+	font-size: 0.875rem;
 }
 .note-content-list-item-detail{
-	font-size: 14px;
 	line-height: 14px;
+	font-size: 0.75rem;
 }
 
 /** 笔记详情 **/
@@ -159,6 +160,7 @@ html,body{
 }
 .note-detail-closeBtn{
 	float: right;
+	padding:40px 20px 0px 0px;
 }
 .note-detail-closeBtn a{
 	width: 20%;
@@ -172,4 +174,8 @@ html,body{
 	padding: 20px;
 	font-size: 16px;
 	line-height: 20px;
+}
+.note-detail-content p{
+	padding:10px;
+	font-size: 0.875rem;
 }
