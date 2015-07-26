@@ -20,6 +20,9 @@ html,body {
 	font-family: Helvetica,Arial,sans-serif，Microsoft Yahei;
 	background: #eeeeee;
 }
+.dis-none {
+	display: none;
+}
 
 /**屏幕细分**/
 @media screen and (max-width: 500px) {
@@ -39,37 +42,21 @@ html,body {
 	background: #191818;
 }
 .note-cat-top {
-	width: 100%;
-	height: 80px;
-}
-.note-category-backBtn {
-	float: right;
-	padding: 20px 0 0 0;
-}
-.note-category-backBtn a {
-	display: block;
-	padding: 8px;
-	width: 25px;
-	border-radius: 5px;
-	text-decoration: none;
-	text-align: center;
-	color: #a1a1a1;
-	background: #313030;	
-}
-.note-category-backBtn a i{
-	font-size: 25px;	
-}
-.note-cat-top-name {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 10px;
 	box-sizing: border-box;
-	width: 80%;
 	height: 80px;
 	padding-left: 30px;
 	font-size: 30px;
 	line-height: 80px;
 	color:#a1a1a1;
 }
-.note-cat-list ul li {
-	overflow: hidden;
+.note-cat-list {
+	overflow: auto;
+	margin-top: 80px;
+	margin-bottom: 60px;
 }
 .note-cat-list ul li a {
 	display: block;
@@ -80,16 +67,18 @@ html,body {
 	font-size: 0.875rem;
 	color: #a1a1a1;
 }
-.note-cat-list ul li a.active,.note-cat-list ul li a:hover {
+.note-cat-list ul li a.active {
 	color: #fff;
 	background:#313030;
 }
 .note-cat-bottom {
 	position: absolute;
 	left: 0;
-	right: 0;
+	right: 10px;
 	bottom: 0;
-	padding: 17px 35px;
+	height: 40px;
+	padding: 10px 0 10px 35px;
+	background: #191818;
 }
 .note-cat-btn {
 	display: inline-block;
@@ -110,7 +99,6 @@ html,body {
 
 /* 遮罩层 */
 #hover-content {
-	display: none;
 	position: fixed;
 	top: 0;
 	z-index: 100;
@@ -118,6 +106,15 @@ html,body {
 	height: 100%;
 	background: #000;
 	opacity: 0.6;
+}
+#hover-content p {
+	position: absolute;
+	right: 20px;
+	top: 35%;
+	width: 15px;
+	height: 100%;
+	font-size: 15px;
+	color: #a1a1a1;
 }
 
 /* 笔记列表 */
@@ -189,7 +186,7 @@ html,body {
 	color: #6e6d6d;
 	background: #F6F6F6;
 }
-.note-content-list ul li a:hover,.note-content-list ul li a.active {
+.note-content-list ul li a.active {
 	border: 1px solid #2ea2e0;
 }
 .note-content-list-item-title {
