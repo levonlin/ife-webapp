@@ -31,9 +31,9 @@ function hideAddressBar_android(){   //隐藏安卓手机浏览器地址栏
 };
   
 if( browser.versions.android || browser.versions.iPhone){   //判断移动端浏览器 
-  /*if(browser.versions.android){
+  if(browser.versions.android){
     hideAddressBar_android();
-  };*/
+  };
 
 	$(".note-content-list ul li").click(function(event){   //点击显示内容
 		$(".note-content").hide();
