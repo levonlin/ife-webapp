@@ -20,7 +20,7 @@ html,body {
 	font-family: Helvetica,Arial,sans-serif，Microsoft Yahei;
 	background: #eeeeee;
 }
-.dis-none {
+.mob-dis-none {
 	display: none;
 }
 
@@ -140,6 +140,7 @@ html,body {
 	background-color: #fff;
 }
 .note-category-showBtn {
+	display: block;
 	float: left;
 	padding-top: 10px;
 }
