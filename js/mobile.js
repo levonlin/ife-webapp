@@ -59,7 +59,7 @@ if( browser.versions.android || browser.versions.iPhone){   //判断移动端浏
   $("#hover-content").bind("touchend", function(event){   //触摸关闭侧边栏
     $(".note-category").fadeOut();
     $("#hover-content").addClass("dis-none");
-    $('body').css('overflow', 'auto');
+    $('body').css('overflow', '');
     event.stopPropagation()
   });
 
