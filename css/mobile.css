@@ -116,6 +116,9 @@ html,body {
 	font-size: 15px;
 	color: #ddd;
 }
+#hover-content p i {
+	display: block;
+}
 
 /* 笔记列表 */
 .note-content {
