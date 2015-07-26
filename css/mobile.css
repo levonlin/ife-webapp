@@ -110,11 +110,11 @@ html,body {
 #hover-content p {
 	position: absolute;
 	right: 20px;
-	top: 35%;
+	padding-top: 35%;
 	width: 15px;
 	height: 100%;
 	font-size: 15px;
-	color: #a1a1a1;
+	color: #ddd;
 }
 
 /* 笔记列表 */
