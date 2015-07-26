@@ -15,8 +15,26 @@ var browser={
             };  
          }()
 }   
+
+function hideAddressBar_android(){   //隐藏安卓手机浏览器地址栏
+  var self = document.getElementsByTagName('body')[0];
+  if (self.requestFullscreen) {
+    //html5新增的全屏方法
+    self.requestFullscreen();
+  } else if (self.mozRequestFullScreen) {
+    //针对mozlia内核的hack
+    self.mozRequestFullScreen();
+  } else if (self.webkitRequestFullScreen) {
+    //针对webkit内核的hack
+    self.webkitRequestFullScreen();
+  }
+};
   
 if( browser.versions.android || browser.versions.iPhone){   //判断移动端浏览器 
+  if(browser.versions.android){
+    hideAddressBar_android();
+  };
+
 	$(".note-content-list ul li").click(function(event){   //点击显示内容
 		$(".note-content").hide();
 		$(".note-detail").fadeIn();
@@ -87,4 +105,4 @@ if( browser.versions.android || browser.versions.iPhone){   //判断移动端浏
         $('body').css('overflow', 'auto');
       }
   }, false);  
-}      
+};   
