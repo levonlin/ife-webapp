@@ -46,6 +46,23 @@ if( browser.versions.android || browser.versions.iPhone){   //判断移动端浏
 		$(".note-content").fadeIn();
 	}); 
 
+  $(".note-category-showBtn").bind("touchend", function(event){   //触摸显示侧边栏
+    var ulHeight=$(".note-category").height()-$(".note-cat-top").outerHeight()-
+                 $(".note-cat-bottom").outerHeight();
+    $(".note-cat-list").css("height", ulHeight);   //计算列表高度，决定列表是否显示滚动条
+    $("#hover-content").removeClass("dis-none");
+    $(".note-category").fadeIn();
+    $(".note-content ul li").unbind();
+    $('body').css('overflow', 'hidden'); //显示侧边栏时禁止后面内容滚动 
+  });
+
+  $("#hover-content").bind("touchend", function(event){   //触摸关闭侧边栏
+    $(".note-category").fadeOut();
+    $("#hover-content").addClass("dis-none");
+    $('body').css('overflow', '');
+  });
+
+/*
   //滑动的角度
   function GetSlideAngle(dx, dy) {
       return Math.atan2(dy, dx) * 180 / Math.PI;
@@ -102,7 +119,7 @@ if( browser.versions.android || browser.versions.iPhone){   //判断移动端浏
       if(direction==3){
         $("#hover-content").addClass("dis-none");
 				$(".note-category").fadeOut();
-        $('body').css('overflow', 'auto');
+        $('body').css('overflow', '');
       }
-  }, false);  
+  }, false);  */
 };   
