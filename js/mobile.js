@@ -31,9 +31,9 @@ function hideAddressBar_android(){   //隐藏安卓手机浏览器地址栏
 };
   
 if( browser.versions.android || browser.versions.iPhone){   //判断移动端浏览器 
-  if(browser.versions.android){
+  /*if(browser.versions.android){
     hideAddressBar_android();
-  };
+  };*/
 
 	$(".note-content-list ul li").click(function(event){   //点击显示内容
 		$(".note-content").hide();
@@ -52,14 +52,15 @@ if( browser.versions.android || browser.versions.iPhone){   //判断移动端浏
     $(".note-cat-list").css("height", ulHeight);   //计算列表高度，决定列表是否显示滚动条
     $("#hover-content").removeClass("dis-none");
     $(".note-category").fadeIn();
-    $(".note-content ul li").unbind();
+    //$(".note-content ul li").unbind();
     $('body').css('overflow', 'hidden'); //显示侧边栏时禁止后面内容滚动 
   });
 
   $("#hover-content").bind("touchend", function(event){   //触摸关闭侧边栏
     $(".note-category").fadeOut();
     $("#hover-content").addClass("dis-none");
-    $('body').css('overflow', '');
+    $('body').css('overflow', 'auto');
+    event.stopPropagation()
   });
 
 /*
