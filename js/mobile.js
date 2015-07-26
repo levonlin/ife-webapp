@@ -52,7 +52,7 @@ if( browser.versions.android || browser.versions.iPhone){   //判断移动端浏
     $('body').css('overflow', 'hidden'); //显示侧边栏时禁止后面内容滚动 
   });
 
-  $("#hover-content").click(function(event){   //触摸关闭侧边栏
+  $("#hover-content").click(function(event){   //点击关闭侧边栏
     $(".note-category").fadeOut();
     $("#hover-content").addClass("dis-none");
     $('body').css('overflow', '');
