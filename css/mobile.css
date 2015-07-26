@@ -159,6 +159,7 @@ html,body {
 	padding-top: 15px;
 	padding-left: 20px;
 	font-size: 25px;
+	font-weight: 700;
 	color: #a1a1a1;
 }
 .note-content-addBtn {
@@ -167,9 +168,9 @@ html,body {
 }
 .note-content-addBtn a {
 	display: block;
-	padding: 8px;
+	padding: 10px;
 	width: 70px;
-	border-radius: 3px;
+	border-radius: 15px;
 	text-decoration: none;
 	text-align: center;
 	font-size: 10px;
