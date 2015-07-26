@@ -20,6 +20,9 @@ html,body {
 	font-family: Helvetica,Arial,sans-serif，Microsoft Yahei;
 	background: #eeeeee;
 }
+.dis-none {
+	display: none;
+}
 
 /**屏幕细分**/
 @media screen and (max-width: 500px) {
@@ -29,71 +32,66 @@ html,body {
 /** 笔记目录 **/
 .note-category {
 	display: none;
-	position: absolute;
+	position: fixed;
+	top: 0;
 	left: 0;
+	z-index: 200;
+	padding-right: 10px;
 	width: 80%;
 	height: 100%;
-	z-index: 200;
 	background: #191818;
 }
-.note-category-backBtn {
-	float: right;
-	padding: 20px 10px 0 0;
-}
-.note-category-backBtn a {
-	display: block;
-	padding: 10px;
-	width: 25px;
-	border-radius: 5px;
-	text-decoration: none;
-	text-align: center;
-	font-size: 14px;
-	color: #A1A1A1;
-	background: #313030;	
-}
-.note-cat-top{
-	width: 100%;
+.note-cat-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 10px;
+	box-sizing: border-box;
 	height: 80px;
+	padding-left: 30px;
 	font-size: 30px;
-	text-align: center;
 	line-height: 80px;
-	color:#A1A1A1;
+	color:#a1a1a1;
 }
-.note-cat-list ul li{
-	overflow: hidden;
+.note-cat-list {
+	overflow: auto;
+	margin-top: 80px;
+	margin-bottom: 60px;
 }
-.note-cat-list ul li a{
-	width: 100%;
+.note-cat-list ul li a {
 	display: block;
-	color: #A1A1A1;
-	padding: 10px 0px 10px 35px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 0 10px 30px;
 	text-decoration: none;
 	font-size: 0.875rem;
+	color: #a1a1a1;
 }
-.note-cat-list ul li a.active,.note-cat-list ul li a:hover{
-	color: #FFF;
+.note-cat-list ul li a.active {
+	color: #fff;
 	background:#313030;
 }
-.note-cat-bottom{
+.note-cat-bottom {
 	position: absolute;
 	left: 0;
-	right: 0;
+	right: 10px;
 	bottom: 0;
-	padding: 17px;
-	padding-left: 37px;
+	height: 40px;
+	padding: 10px 0 10px 35px;
+	background: #191818;
 }
-.note-cat-btn{
+.note-cat-btn {
 	display: inline-block;
 	width: 40px;
 	height: 40px;
-	line-height: 40px;
 	border-radius: 5px;
+	line-height: 40px;
 	text-align: center;
 	background:#313030;
 }
 .note-cat-btn a{
 	text-decoration: none;
-	color: #A1A1A1;
+	color: #a1a1a1;
 }
 .note-cat-btn i{
 	font-size: 20px;
@@ -101,7 +99,25 @@ html,body {
 
 /* 遮罩层 */
 #hover-content {
-	display: none;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.6;
+}
+#hover-content p {
+	position: absolute;
+	right: 20px;
+	padding-top: 35%;
+	width: 15px;
+	height: 100%;
+	font-size: 15px;
+	color: #ddd;
+}
+#hover-content p i {
+	display: block;
 }
 
 /* 笔记列表 */
@@ -112,9 +128,16 @@ html,body {
 	background: #fff;
 }
 .note-content-top {
+	position: fixed;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	z-index: 0;
+	border-bottom: 2px solid #da3610;
+	padding: 10px 20px;
 	width: 100%;
 	height: 70px;
-	padding-bottom: 10px;
+	background-color: #fff;
 }
 .note-category-showBtn {
 	float: left;
@@ -128,7 +151,6 @@ html,body {
 	border: solid 1px #da3610;
 	text-decoration: none;
 	text-align: center;
-	font-size: 5px;
 	color: #fff;
 	background: #da3610;	
 }
@@ -137,6 +159,7 @@ html,body {
 	padding-top: 15px;
 	padding-left: 20px;
 	font-size: 25px;
+	font-weight: 700;
 	color: #a1a1a1;
 }
 .note-content-addBtn {
@@ -145,14 +168,17 @@ html,body {
 }
 .note-content-addBtn a {
 	display: block;
-	padding: 8px;
+	padding: 10px;
 	width: 70px;
-	border-radius: 3px;
+	border-radius: 15px;
 	text-decoration: none;
 	text-align: center;
 	font-size: 10px;
 	color: #fff;
 	background: #da3610;	
+}
+.note-content-list{
+	margin-top: 60px;
 }
 .note-content-list ul li a {
 	display: block;
@@ -164,7 +190,7 @@ html,body {
 	color: #6e6d6d;
 	background: #F6F6F6;
 }
-.note-content-list ul li a:hover,.note-content-list ul li a.active {
+.note-content-list ul li a.active {
 	border: 1px solid #2ea2e0;
 }
 .note-content-list-item-title {
@@ -198,7 +224,7 @@ html,body {
 }
 .note-detail-closeBtn {
 	float: right;	
-	padding: 20px 10px 0px 0px;
+	padding: 20px 10px 0 0;
 }
 .note-detail-closeBtn a {
 	width: 20%;
